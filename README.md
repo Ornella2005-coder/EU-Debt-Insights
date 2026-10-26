@@ -213,7 +213,7 @@ Les tables de `data/cleaned/` peuvent aussi être utilisées directement dans Ex
 
 ## Auteur
 
-**Awovi Fangnon** · Bachelor 3, Nexa Digital School
+**Ornella Fangnon** · Bachelor 3, Nexa Digital School · [GitHub](https://github.com/Ornella2005-coder)
 
 ## Licence
 
