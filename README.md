@@ -10,33 +10,32 @@ Tableau de bord **Power BI** qui analyse la **dette publique**, le **déficit**,
 
 > Projet réalisé dans le cadre du Bachelor 3, Nexa Digital School (semestre 1).
 
-![Page d'accueil du tableau de bord](images/home_page.png)
+---
+
+## Sommaire
+
+- [Objectifs](#objectifs)
+- [Résultats clés (2025)](#résultats-clés-2025)
+- [Interprétation des résultats](#interprétation-des-résultats)
+- [Aperçus](#aperçus)
+- [Données](#données)
+- [Pipeline et modélisation](#pipeline-et-modélisation)
+- [Mesures DAX](#mesures-dax)
+- [Structure du dépôt](#structure-du-dépôt)
+- [Utilisation](#utilisation)
+- [Limites et améliorations](#limites-et-améliorations)
+- [Auteur](#auteur)
+- [Licence](#licence)
 
 ---
 
-## 📌 Sommaire
-
-- [Objectifs](#-objectifs)
-- [Résultats clés](#-résultats-clés)
-- [Interprétation des résultats](#-interprétation-des-résultats)
-- [Aperçus](#-aperçus)
-- [Données](#-données)
-- [Pipeline et modélisation](#-pipeline-et-modélisation)
-- [Mesures DAX](#-mesures-dax)
-- [Structure du dépôt](#-structure-du-dépôt)
-- [Utilisation](#-utilisation)
-- [Limites et améliorations](#-limites-et-améliorations)
-- [Auteur et licence](#-auteur)
-
----
-
-## 🎯 Objectifs
+## Objectifs
 
 1. **Mesurer** l'état des finances publiques de chaque pays : dette, déficit, intérêts, recettes, dépenses (en % du PIB et en milliards d'euros).
 2. **Comparer** les pays entre eux et opposer **zone euro** et **hors zone euro**.
 3. **Suivre** le respect des critères de Maastricht et l'évolution sur 20 ans (crise de 2008, pandémie de 2020).
 
-## 📊 Résultats clés (2025)
+## Résultats clés (2025)
 
 | Indicateur (UE-27) | Valeur |
 |---|---|
@@ -53,7 +52,7 @@ Tableau de bord **Power BI** qui analyse la **dette publique**, le **déficit**,
 
 *Chiffres calculés à partir des données nettoyées (`data/cleaned/`), en ratios agrégés Σ dette / Σ PIB.*
 
-## 🧠 Interprétation des résultats
+## Interprétation des résultats
 
 ### 1. Une dette élevée, installée durablement au-dessus du seuil de Maastricht
 Avec **82,8 % du PIB**, la dette de l'UE-27 dépasse de plus de 20 points le seuil de 60 %. Ce n'est pas un phénomène récent : le ratio a franchi 75 % dès 2009 et n'est plus repassé sous 79 % depuis 2010. Chaque crise a fait monter la dette par paliers (**+15,5 points** entre 2008 et 2010, **+12,1 points** en 2020), alors que les phases de reprise ne l'ont réduite que lentement (de 89,0 % en 2014 à 79,1 % en 2019). Les crises font monter la dette vite, les reprises ne la font baisser que lentement.
@@ -88,7 +87,7 @@ La charge d'intérêts de l'UE est passée de **2,8 % du PIB en 2005** à un pla
 ### En résumé
 L'UE sort de deux décennies de crises avec une dette durablement supérieure à 80 % du PIB, très concentrée sur quelques grandes économies de la zone euro. Plusieurs pays du Sud, longtemps considérés comme les plus fragiles (Grèce, Portugal, Chypre, Irlande), se sont redressés. La vigilance porte désormais sur des pays comme la **France**, la **Belgique**, la **Finlande** et la **Roumanie**, où dette et déficit progressent encore alors que le coût de l'emprunt augmente.
 
-## 🖼️ Aperçus
+## Aperçus
 
 | Carte de l'endettement | Analyse par pays |
 |---|---|
@@ -96,9 +95,9 @@ L'UE sort de deux décennies de crises avec une dette durablement supérieure à
 
 ![Indicateurs clés](images/kpi_page.png)
 
-> `home_page.png` est une capture du rapport Power BI. Les visuels `debt_map.png`, `country_analysis.png` et `kpi_page.png` sont générés à partir des données nettoyées du modèle et complètent le tableau de bord.
+> Les visuels `debt_map.png`, `country_analysis.png` et `kpi_page.png` sont générés à partir des données nettoyées du modèle et complètent le tableau de bord Power BI.
 
-## 🗂️ Données
+## Données
 
 | Source | Jeu Eurostat | Contenu |
 |---|---|---|
@@ -112,7 +111,7 @@ L'UE sort de deux décennies de crises avec une dette durablement supérieure à
 
 Les fichiers bruts sont décrits dans [`data/raw/README.md`](data/raw/README.md) et les tables nettoyées (export du modèle) sont dans [`data/cleaned/`](data/cleaned/).
 
-## ⚙️ Pipeline et modélisation
+## Pipeline et modélisation
 
 ```
 CSV Eurostat ──► Power Query ──► Modèle en étoile ──► Mesures DAX ──► Rapport Power BI
@@ -137,7 +136,7 @@ CSV Eurostat ──► Power Query ──► Modèle en étoile ──► Mesure
  MESURES: table conteneur des 28 mesures DAX
 ```
 
-## 🧮 Mesures DAX
+## Mesures DAX
 
 28 mesures, dont les principales :
 
@@ -163,7 +162,7 @@ RETURN
 
 La liste complète (expressions et descriptions) est dans le [dictionnaire de données](docs/data_dictionary.pdf).
 
-## 📁 Structure du dépôt
+## Structure du dépôt
 
 ```
 EU-Debt-Insights/
@@ -179,7 +178,6 @@ EU-Debt-Insights/
 │       └── pays.csv
 │
 ├── images/
-│   ├── home_page.png
 │   ├── debt_map.png
 │   ├── country_analysis.png
 │   └── kpi_page.png
@@ -192,7 +190,7 @@ EU-Debt-Insights/
 └── LICENSE
 ```
 
-## 🚀 Utilisation
+## Utilisation
 
 1. Cloner le dépôt :
    ```bash
@@ -206,17 +204,17 @@ EU-Debt-Insights/
 
 Les tables de `data/cleaned/` peuvent aussi être utilisées directement dans Excel, Python ou un autre outil BI.
 
-## 🔍 Limites et améliorations
+## Limites et améliorations
 
 - **Recettes / dépenses** : la requête `recettes_depenses` ne filtre pas le secteur institutionnel ; le pivot additionne S13 et ses sous-secteurs, ce qui surévalue les recettes, les dépenses et la mesure `Déficit % PIB`. Correctif prévu : filtrer `sector = "S13"` avant le pivot. Le déficit présenté dans ce README provient du solde PDE (`solde_meur`), qui n'est pas concerné.
-- **Segment Année** : la table `Annee` n'est pas encore reliée aux tables de faits ; il faut créer les relations `Annee[Value] → dette_deficit[annee]` et `→ recettes_depenses[annee]` pour que le filtre par année s'applique.
+- **Segment Année** : la table `Annee` (GENERATESERIES) n'est pas encore reliée aux tables de faits. Le segment (réglé sur 2010 dans la version actuelle) ne filtre donc pas les visuels, qui affichent des ratios calculés sur toute la période 2005–2025. Il faut créer les relations `Annee[Value] → dette_deficit[annee]` et `Annee[Value] → recettes_depenses[annee]` pour que le filtre par année s'applique.
 - **Mesure `Dette France`** : le filtre doit porter sur `"France"` (ou sur le code `"FR"` de `geo\TIME_PERIOD`).
 - **Pistes** : connexion directe à l'API Eurostat, carte interactive, pages pays détaillées, ajout de la croissance et de l'inflation pour analyser la dynamique de la dette.
 
-## 👤 Auteur
+## Auteur
 
 **Awovi Fangnon** · Bachelor 3, Nexa Digital School
 
-## 📄 Licence
+## Licence
 
 Code, modèle et documentation sous licence [MIT](LICENSE). Données © Union européenne, Eurostat, sous licence CC BY 4.0.
