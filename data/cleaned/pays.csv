@@ -1,0 +1,28 @@
+code_pays,pays,zone_euro,zone
+AT,Autriche,oui,Zone euro
+BE,Belgique,oui,Zone euro
+BG,Bulgarie,non,Hors zone euro
+CY,Chypre,oui,Zone euro
+CZ,Tchéquie,non,Hors zone euro
+DE,Allemagne,oui,Zone euro
+DK,Danemark,non,Hors zone euro
+EE,Estonie,oui,Zone euro
+EL,Grèce,oui,Zone euro
+ES,Espagne,oui,Zone euro
+FI,Finlande,oui,Zone euro
+FR,France,oui,Zone euro
+HR,Croatie,oui,Zone euro
+HU,Hongrie,non,Hors zone euro
+IE,Irlande,oui,Zone euro
+IT,Italie,oui,Zone euro
+LT,Lituanie,oui,Zone euro
+LU,Luxembourg,oui,Zone euro
+LV,Lettonie,oui,Zone euro
+MT,Malte,oui,Zone euro
+NL,Pays-Bas,oui,Zone euro
+PL,Pologne,non,Hors zone euro
+PT,Portugal,oui,Zone euro
+RO,Roumanie,non,Hors zone euro
+SE,Suède,non,Hors zone euro
+SI,Slovénie,oui,Zone euro
+SK,Slovaquie,oui,Zone euro
